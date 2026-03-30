@@ -1,1 +1,49 @@
-# Root (for hardhat + frontend scripts)
+{
+  "name": "crypto-password-dapp",
+  "version": "1.0.0",
+  "description": "Decentralized Password Generator & Encrypted Password Vault built with Solidity and React",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:local": "hardhat run scripts/deploy.js --network hardhat",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "verify:sepolia": "hardhat verify --network sepolia",
+    "frontend": "npm run dev --workspace=frontend",
+    "dev": "npm run frontend",
+    "build": "npm run build --workspace=frontend",
+    "lint": "eslint \"**/*.{ts,tsx}\" --max-warnings=0",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,sol}\"",
+    "clean": "hardhat clean && rm -rf artifacts cache deployments"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.2.0"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.0",
+    "@types/node": "^22.13.0",
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.19",
+    "prettier": "^3.5.0",
+    "prettier-plugin-solidity": "^1.4.2",
+    "typescript": "^5.7.3"
+  },
+  "keywords": [
+    "solidity",
+    "hardhat",
+    "react",
+    "web3",
+    "dapp",
+    "password-vault",
+    "password-generator",
+    "ethereum"
+  ],
+  "author": "Marti Yates",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YOUR_USERNAME/crypto-password-dapp.git"
+  }
+}
