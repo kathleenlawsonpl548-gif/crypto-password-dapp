@@ -1,5 +1,6 @@
 
 
+
 import { useAccount, useConnect, useDisconnect, useSwitchChain } from 'wagmi';
 import { Button } from './ui/Button'; // We'll create this simple button later
 import { Wallet, LogOut, AlertCircle } from 'lucide-react';
